@@ -1,0 +1,196 @@
+#signin {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: white;
+  border-radius: 28px;
+  position: relative;
+
+  .welcome {
+    text-align: left;
+    position: relative;
+    left: 30px;
+    top: 30px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 30px 50px;
+    gap: 10px;
+
+    .first-page.hidden {
+      display: none;
+    }
+
+    .second-page.show {
+      display: block;
+    }
+
+    .second-page {
+      display: none;
+    }
+
+    .hint {
+      color: red;
+    }
+
+    .tick{
+      display: inline-block;
+      width: 120px;
+      color: green;
+      margin-left: 20px;
+    }
+
+    .verify.show {
+      display: inline;
+    }
+
+    .verify {
+      width: 120px;
+      display: none;
+      margin-left: 20px;
+    }
+
+    .next.hidden {
+      display: none;
+    }
+
+    .next {
+      width: 80px;
+      height: 48px;
+      border-radius: 10px;
+      background-color: #34aecc;
+      color: aliceblue;
+      position: absolute;
+      right: 30px;
+      bottom: -60px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .prev.show {
+      display: block;
+    }
+
+    .prev {
+      width: 80px;
+      height: 48px;
+      border-radius: 10px;
+      background-color: #34aecc;
+      color: aliceblue;
+      position: absolute;
+      right: 120px;
+      bottom: -60px;
+      display: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .submit.show {
+      display: block;
+    }
+
+    .submit {
+      width: 80px;
+      height: 48px;
+      border-radius: 10px;
+      background-color: #34aecc;
+      color: aliceblue;
+      position: absolute;
+      right: 30px;
+      bottom: -60px;
+      display: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+
+
+  /* 手機 (小於768px) */
+  @media(max-width:767px) {
+    .welcome {
+      font-size: 30px;
+      text-align: center;
+      left: 0;
+    }
+
+    .form {
+      font-size: 12px;
+      align-items: center;
+
+      .tick{
+        width: 80px;
+        margin-left: 0px;
+      }
+
+      .verify {
+        width: 80px;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+
+      span::after {
+        content: "";
+        display: block;
+        height: 5px;
+      }
+
+      input {
+        max-width: 120px;
+
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  /* 平板 (768px 至 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .welcome {
+      font-size: 40px;
+    }
+
+    .form {
+      font-size: 16px;
+
+      .tick{
+        width: 80px;
+      }
+
+      .verify {
+        font-size: 16px;
+        width: 80px;
+      }
+
+      input {
+        max-width: 120px;
+
+        &::placeholder {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  /* 桌面 (大於 1024px) */
+  @media (min-width: 1025px) {
+    .welcome {
+      font-size: 50px;
+    }
+
+    input {
+      max-width: 300px;
+    }
+  }
+}

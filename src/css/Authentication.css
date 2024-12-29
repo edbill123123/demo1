@@ -1,0 +1,50 @@
+/*authentication*/
+#authentication {
+  &::before {
+    content: "";
+  }
+
+  &::after {
+    content: "";
+  }
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+
+  /*flex-container*/
+  .flex-container {
+    width: 70%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /*flex-item1*/
+    .flex-item1 {
+      position: relative;
+      margin: 0 auto;
+      .button {
+        border: none;
+        padding: 10px 20px;
+        color: black;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .button.active {
+        background-color: rgb(0,210,190);
+      }
+
+      .button.inactive {
+        background-color: rgb(235, 231, 231);
+      }
+
+    }
+
+    /*flex-item2*/
+   
+  }
+}

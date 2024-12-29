@@ -1,0 +1,48 @@
+#fb-login {
+  height: 38.8px;
+  background: rgb(26, 119, 242);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  border: 0px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+@media (max-width:374px) {
+  #fb-login {
+    width: 150px;
+    font-size: 12px;
+    gap: 3px;
+
+    #fb-login-img {
+      width: 20px;
+    }
+  }
+}
+
+@media (min-width:375px) and (max-width:767px) {
+  #fb-login {
+    width: 200px;
+    font-size: 12px;
+
+    #fb-login-img {
+      width: 20px;
+    }
+  }
+}
+
+@media (min-width:768px) {
+  #fb-login{
+    width: 300px;
+    font-size: 14px;
+
+    #fb-login-img {
+      width: 30px;
+    }
+  }
+}

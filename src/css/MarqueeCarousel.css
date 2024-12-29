@@ -1,0 +1,22 @@
+/* 自訂 dots 外框 */
+.slick-dots.custom-dots {
+  display: flex !important; /* 確保點水平排列 */
+  justify-content: center;
+  gap: 30px;
+  bottom: 20px; /* 調整 dots 的位置 */
+}
+
+/* 每個長條形點的樣式 */
+.custom-dot {
+  width: 30px; /* 默認長度 */
+  height: 6px; /* 長條的高度 */
+  background-color: #ccc; /* 未選中顏色 */
+  border-radius: 3px; /* 圓角 */
+  transition: all 0.3s ease; /* 平滑變化 */
+}
+
+/* 選中時變長 */
+.custom-dot.active {
+  width: 50px; /* 選中長條的長度 */
+  background-color: #007bff; /* 選中顏色 */
+}

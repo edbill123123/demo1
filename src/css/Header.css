@@ -1,0 +1,42 @@
+#header {
+  .flex-container {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(135deg, #00569e, #995db5);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .flex-item1 {
+      width: 180px;
+      height: inherit;
+      margin-left: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+
+      #logo-image {
+        max-width: 60px;
+      }
+    }
+
+    .flex-item2 {
+      display: flex;
+      flex: 0 1 auto;
+      gap: 20px;
+      font-size: 30px;
+      margin-right: 20px;
+
+      a {
+        color: aliceblue;
+        text-decoration: none;
+
+        &:hover {
+          color: aqua;
+        }
+      }
+    }
+  }
+}

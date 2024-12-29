@@ -1,0 +1,75 @@
+#login {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: white;
+  border-radius: 28px;
+  position: relative;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+
+    .submit {
+      width: 80px;
+      height: 48px;
+      border-radius: 10px;
+      background-color: #34aecc;
+      color: aliceblue;
+      position: relative;
+      margin: 10px auto;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .other {
+      margin-top: 10px;
+    }
+
+    .google-button,
+    .facebook-button {
+      margin: 10px auto;
+    }
+  }
+
+
+  /* 手機 (小於768px) */
+  @media(max-width:767px) {
+    .form {
+      font-size: 12px;
+      margin-right: 0;
+      padding: 30px;
+      align-items: center;
+
+      input {
+        max-width: 100px;
+
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  /* 平板 (768px 至 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .form {
+      font-size: 16px;
+
+      input {
+        max-width: 120px;
+      }
+    }
+  }
+
+  /* 桌面 (大於 1024px) */
+  @media (min-width: 1025px) {
+
+    input {
+      max-width: 300px;
+    }
+  }
+}
