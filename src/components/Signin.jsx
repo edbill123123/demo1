@@ -103,7 +103,10 @@ function Signin() {
   //驗證信箱驗證碼
   const verifyEmailCode = async () => {
     try {
-      const response = await axios.post(`${config.API_URL}/email/verifyCode`)
+      const response = await axios.post(`${config.API_URL}/email/verifyCode`, {
+        email: formData.email,
+        code: formData.emailVerification
+      })
       if (response.status === 200) {
         setIsEmailVerified(true);
       }
