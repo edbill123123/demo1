@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
+import config from "../static/js/confiig.js";
 import "../css/Signin.css"
 
 
@@ -61,7 +62,7 @@ function Signin() {
     setPhoneTimer(30);
 
     try {
-      await axios.post('http://localhost:5000/phone/sendCode', {
+      await axios.post(`${config.API_URL}/phone/sendCode`, {
         phoneNumber: formattedPhoneNumber
       });
     } catch (error) {
@@ -72,7 +73,7 @@ function Signin() {
   // 驗證手機驗證碼
   const verifyPhoneCode = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/phone/verifyCode', {
+      const response = await axios.post(`${config.API_URL}/phone/verifyCode`, {
         phoneNumber: formattedPhoneNumber,
         code: formData.phoneNumberVerification
       });
@@ -91,7 +92,7 @@ function Signin() {
     setEmailTimer(30);
 
     try {
-      await axios.post("http://localhost:5000/email/sendCode", {
+      await axios.post(`${config.API_URL}/email/sendCode`, {
         email: formData.email
       })
     } catch (error) {
@@ -102,7 +103,7 @@ function Signin() {
   //驗證信箱驗證碼
   const verifyEmailCode = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/email/verifyCode")
+      const response = await axios.post(`${config.API_URL}/email/verifyCode`)
       if (response.status === 200) {
         setIsEmailVerified(true);
       }

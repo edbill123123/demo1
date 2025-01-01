@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+import config from "../static/js/confiig.js";
 import "../css/GoogleAuth.css"
 
 const GoogleAuth = () => {
@@ -9,7 +10,7 @@ const GoogleAuth = () => {
       const credential = response.credential;
 
       // 發送請求到 Node.js 伺服器
-      fetch("https://localhost:5000/auth/google", {
+      fetch(`${config.API_URL}/auth/google`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
