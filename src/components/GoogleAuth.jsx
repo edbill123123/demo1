@@ -9,7 +9,7 @@ const GoogleAuth = () => {
       const credential = response.credential;
 
       // 發送請求到 Node.js 伺服器
-      fetch("http://localhost:5000/auth/google", {
+      fetch("https://localhost:5000/auth/google", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
