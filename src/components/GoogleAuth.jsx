@@ -35,7 +35,6 @@ const GoogleAuth = () => {
 
   const handleGoogleButton = () => {
     if (window.google && window.google.accounts) {
-      console.log(123)
       window.google.accounts.id.prompt();
     }
   }
